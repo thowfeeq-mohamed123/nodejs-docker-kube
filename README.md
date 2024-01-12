@@ -1,7 +1,7 @@
 # nodejs-docker-kube
 
 1. Create node.js application
-2. Create docker file
+2. Create docker file (Docker init)
 3. Create docker compose file
 4. Build node js application using docker (docker build -t <docker hub username>/<image name>:<version>)
 5. Login to docker account
