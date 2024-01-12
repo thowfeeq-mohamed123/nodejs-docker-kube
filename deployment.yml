@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-docker-kube
+  labels:
+    app: "nodejs-docker-kube"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  nodejs-docker-kube
+  template:
+    metadata:
+      labels:
+        app:  nodejs-docker-kube
+    spec:
+      containers:
+      - name:  nodejs-docker-kube
+        image: mohamedthowfeeq/nodejs-docker-kube:1.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 4000
