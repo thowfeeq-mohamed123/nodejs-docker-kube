@@ -17,6 +17,7 @@ spec:
       containers:
       - name:  nodejs-docker-kube
         image: mohamedthowfeeq/nodejs-docker-kube:1.0
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"
